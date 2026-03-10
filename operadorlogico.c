@@ -20,9 +20,14 @@ int main() {
       printf("Digite a segunda nota: ");
       scanf("%f", &nota2);
 
+      //verifica a entrada
+      if ((nota1 >= 0 && nota1 <= 10) && (nota2 >= 0 && nota2 <= 10)){
       // Cálculo da média
       media = (nota1 + nota2) / 2;
       printf("A média do estudante é: %.2f\n", media);
+      } else {
+        printf("Entrada incorreta no valor da nota.\n");
+      }
       break;
     case 2:
       // Determinação do status com base na média
