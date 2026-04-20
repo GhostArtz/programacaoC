@@ -1,16 +1,17 @@
 #include <stdio.h>
- 
-int main() {
 
-    int numero, i;
-
-    printf("Escolha o número que deseja ver a tabuada: ");
-    scanf("%d", &numero);
-    printf("\n");
-
-    for(i = 0; i <= 10; i++){
-        printf("%d x %d = %d\n", numero, i, numero * i);
+void recursivo(int n){
+    if(n > 0){
+        printf("%d \n", n);
+        recursivo(n - 1);
     }
+}
+
+int main(){
+
+    int numero = 10;
+
+    recursivo(numero);
 
     return 0;
 }
